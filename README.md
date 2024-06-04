@@ -36,7 +36,6 @@ id,counter
 incremental1,10
 incremental2,20
 incremental3,30
-
 ``` 
 
 ### Задача 2
