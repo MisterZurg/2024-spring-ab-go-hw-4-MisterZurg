@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  shit-house:
+    container_name: ch-db
+    image: clickhouse/clickhouse-server:latest
+    environment:
+      CLICKHOUSE_USER: "oleg"
+      CLICKHOUSE_PASSWORD: "tinkoff"
+    ports:
+       - "18123:8123"
+       - "19000:9000"
+    volumes:
+      - "./migrations/20240602192430_p0_create_source_table.sql:/docker-entrypoint-initdb.d/20240602192430_p0_create_source_table.sql"
